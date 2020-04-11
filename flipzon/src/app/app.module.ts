@@ -10,6 +10,9 @@ import { LogoComponent } from './logo/logo.component';
 import { NavitemsComponent } from './navitems/navitems.component';
 import { DropdownComponent } from './dropdown/dropdown.component';
 import { RegisterComponent } from './register/register.component';
+import { UsersComponent } from './users/users.component';
+import { PhonePipe } from './pipes/phonepipe';
+import { CommonService } from './services/common.service';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,15 @@ import { RegisterComponent } from './register/register.component';
     LogoComponent,
     NavitemsComponent,
     DropdownComponent,
-    RegisterComponent
+    RegisterComponent,
+    UsersComponent,
+    PhonePipe
   ],
   imports: [
     BrowserModule,
     FormsModule
   ],
-  providers: [],
+  providers: [CommonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,19 @@
+<table class="table table-striped">
+    <thead>
+        <th>S.No</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Age</th>
+        <th>Balance</th><th></th>
+    </thead>
+    <tbody>
+        <tr *ngFor="let user of users;let i=index">
+            <td>{{i+1}}</td>
+            <td>{{user.name|uppercase|lowercase}}</td>
+            <td>{{user.email|lowercase}}</td>
+            <td>{{user.age}}</td>
+            <td>{{user.balance|currency:'INR'}}</td>
+             <td><button class="btn btn-primay" (click)="selectUser(user)">Select</button></td>
+        </tr>
+    </tbody>
+</table>
