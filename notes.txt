@@ -1,0 +1,30 @@
+
+1.Windows users open the command prompot in the admin mode
+  npm install -g @angular/cli
+
+2. MAC and Linux users
+sudo  npm install -g @angular/cli
+
+
+1. @angular/core
+   - Modules
+   - Component
+   - Pipe
+   - Directive
+   - Provider
+2. @angular/forms
+
+   - reactiveforms
+3. @angular/common/http
+4. @angular/http
+5. @angular/routing
+
+--------------------------
+
+ng new flipzon
+
+Installing bootstrap 
+Go to the project folder and run the following command.
+npm i --save bootstrap
+
+
