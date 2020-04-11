@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
+import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 
@@ -13,6 +14,7 @@ import { RegisterComponent } from './register/register.component';
 import { UsersComponent } from './users/users.component';
 import { PhonePipe } from './pipes/phonepipe';
 import { CommonService } from './services/common.service';
+import { HttpService } from './services/http.service';
 
 @NgModule({
   declarations: [
@@ -27,9 +29,10 @@ import { CommonService } from './services/common.service';
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
-  providers: [CommonService],
+  providers: [CommonService,HttpService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

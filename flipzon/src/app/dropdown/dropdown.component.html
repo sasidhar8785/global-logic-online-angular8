@@ -1,12 +1,6 @@
 
 <div class="dropdown">
-    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-        {{selectedItem.name}}
-    </button>
-    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-      <a class="dropdown-item" href="javascript:void(0)"
-       *ngFor="let item of items" 
-      (click)="selectItem(item)">{{item.name}}</a>
-      
-    </div>
-  </div>
+    <select class="form-control" [(ngModel)]="selectedItem">
+      <option *ngFor="let item of items" (change)="selectedItem=item">{{item.name}}</option>
+    </select>
+  </div>{{selectedItem|json}}
