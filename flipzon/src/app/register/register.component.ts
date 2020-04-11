@@ -10,11 +10,11 @@ import { APP_URL } from '../constants';
 })
 export class RegisterComponent implements OnInit {
   register: Register;
-  constructor(private httpSvc:HttpService) {
+  constructor(private httpSvc: HttpService) {
     this.register = new Register();
-    this.register.email='John@k.com';
-    this.register.yearOfBirth='2019';
-    this.register.country='IN';
+    this.register.email = 'John@k.com';
+    this.register.yearOfBirth = '2019';
+    this.register.country = 'IN';
 
   }
 
@@ -26,28 +26,28 @@ export class RegisterComponent implements OnInit {
     console.log(this.register);
     console.log(this.countries);
   }
-  countries=[];
-  getCountries(){
-    this.httpSvc.commonGet(APP_URL.GET_COUNTRIES).toPromise().then((result:any)=>{
-    
-      this.countries = result.map((x:any)=>{return{name:x.name,id:x.alpha2Code}});
+  countries = [];
+  getCountries() {
+    this.httpSvc.commonGet(APP_URL.GET_COUNTRIES).toPromise().then((result: any) => {
+
+      this.countries = result.map((x: any) => { return { name: x.name, id: x.alpha2Code } });
       console.log(this.countries);
-    }).catch(err=>{
+    }).catch(err => {
       console.log(err);
     })
   }
-  yearList=[];
-  getYears(){
+  yearList = [];
+  getYears() {
     let currentYear = new Date().getFullYear();
     console.log(currentYear);
-    for(let i=currentYear-20;i<currentYear;i++){
-      this.yearList.push({name:i,id:i});
+    for (let i = currentYear - 20; i < currentYear; i++) {
+      this.yearList.push({ name: i, id: i });
     }
   }
-  selectedCountry(item){
-    this.register.country=item;
+  selectedCountry(item) {
+    this.register.country = item;
   }
-  selectedYear(item){
+  selectedYear(item) {
     this.register.yearOfBirth = item;
   }
 }
