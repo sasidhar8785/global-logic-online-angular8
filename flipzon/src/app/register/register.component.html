@@ -29,13 +29,19 @@
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Country</label>
                 <div class="col-sm-4">
-                 <app-dropdown [items]="countries"></app-dropdown>
+                 <app-dropdown [items]="countries" 
+                 [selectedItem]="register.country"
+                  [classname]="'form-control'" 
+                 (selected)="selectedCountry($event)"></app-dropdown>
                 </div>
             </div>
             <div class="form-group row">
                 <label class="col-sm-2 col-form-label">Year Of Birth</label>
                 <div class="col-sm-4">
-                 <app-dropdown [items]="yearList"></app-dropdown>
+                 <app-dropdown [items]="yearList" 
+                 [selectedItem]="register.yearOfBirth"
+                 [classname]="'form-control'" 
+                 (selected)="selectedYear($event)"></app-dropdown>
                 </div>
             </div>
             <div class="form-group row">

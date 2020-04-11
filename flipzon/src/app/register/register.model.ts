@@ -5,4 +5,6 @@ export class Register{
     gender:String;
     email:String;
     terms:String;
+  country: any;
+  yearOfBirth: any;
 }

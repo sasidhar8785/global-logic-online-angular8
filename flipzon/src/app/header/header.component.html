@@ -8,8 +8,11 @@
      <app-navitems></app-navitems>
      <div class="pull-right">
      <app-dropdown></app-dropdown>
-    
     </div>
+    <ul>
+      <li><a [routerLink]="'/users'">Users</a></li>
+      <li><a [routerLink]="'/register'">Register</a></li>
+    </ul>
     <label class="badge">{{usersList.length}}</label>
     <!-- <label>{{userList.length}}</label> -->
     </div>

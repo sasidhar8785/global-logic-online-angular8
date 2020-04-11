@@ -2,6 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {FormsModule} from '@angular/forms';
 import {HttpClientModule} from '@angular/common/http';
+import {RouterModule} from '@angular/router'
 
 import { AppComponent } from './app.component';
 
@@ -30,7 +31,12 @@ import { HttpService } from './services/http.service';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    RouterModule.forRoot(
+      [{path:"register",component:RegisterComponent},
+    {path:"users",component:UsersComponent},
+    {path:"",component:RegisterComponent},]
+    )
   ],
   providers: [CommonService,HttpService],
   bootstrap: [AppComponent]

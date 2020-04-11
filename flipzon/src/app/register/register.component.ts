@@ -13,6 +13,8 @@ export class RegisterComponent implements OnInit {
   constructor(private httpSvc:HttpService) {
     this.register = new Register();
     this.register.email='John@k.com';
+    this.register.yearOfBirth='2019';
+    this.register.country='IN';
 
   }
 
@@ -41,5 +43,11 @@ export class RegisterComponent implements OnInit {
     for(let i=currentYear-20;i<currentYear;i++){
       this.yearList.push({name:i,id:i});
     }
+  }
+  selectedCountry(item){
+    this.register.country=item;
+  }
+  selectedYear(item){
+    this.register.yearOfBirth = item;
   }
 }
