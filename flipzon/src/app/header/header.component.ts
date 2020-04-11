@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
-  constructor() { }
+  /*define class properties*/
+  companyName:String;
+  constructor() { 
+    //Assign Data
+    this.companyName='Global Logic';
+
+  }
 
   ngOnInit(): void {
   }
